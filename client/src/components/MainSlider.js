@@ -73,7 +73,7 @@ const MainSlider = () => {
                 {/* img */}
                 <div className="flex-1">
                   <img
-                    className="xl:absolute xl:-right-16 xl:-bottom-4"
+                    className="xl:absolute xl:-right-16 xl:bottom-4"
                     src={slide.img}
                     alt=""
                   />

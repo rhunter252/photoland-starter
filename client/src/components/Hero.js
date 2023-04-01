@@ -28,7 +28,10 @@ const Hero = () => {
                 <div className="text-[20px] uppercase font-medium leading-tight mb-4">
                   Save 35% all Adidas Sneakers
                 </div>
-                <a href="/" className="uppercase text-accent">
+                <a
+                  href="/search?query=adidas"
+                  className="uppercase text-accent"
+                >
                   Shop now
                 </a>
               </div>
@@ -46,7 +49,7 @@ const Hero = () => {
                 <div className="text-[20px] uppercase font-medium leading-tight mb-4">
                   Save 25% Nike sneakers
                 </div>
-                <a href="/" className="uppercase text-accent">
+                <a href="/search?query=nike" className="uppercase text-accent">
                   Shop now
                 </a>
               </div>
