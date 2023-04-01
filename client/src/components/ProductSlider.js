@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 // import swiper react components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import '../slider.css';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "../slider.css";
 // import required modules
-import { Pagination, Navigation } from 'swiper';
+import { Pagination, Navigation } from "swiper";
 // components
-import Product from '../components/Product';
+import Product from "../components/Product";
 
 const ProductSlider = ({ data }) => {
   return (
@@ -38,13 +38,13 @@ const ProductSlider = ({ data }) => {
       pagination={{
         clickable: true,
       }}
-      className='productSlider mx-auto max-w-[360px] md:max-w-lg xl:max-w-[1410px]'
+      className="productSlider mx-auto max-w-[360px] md:max-w-lg xl:max-w-[1410px]"
     >
       <>
-        {data?.map((product) => {
+        {data?.map((shoe) => {
           return (
-            <SwiperSlide key={product.id}>
-              <Product product={product} />
+            <SwiperSlide key={shoe.id}>
+              <Product shoe={shoe} />
             </SwiperSlide>
           );
         })}

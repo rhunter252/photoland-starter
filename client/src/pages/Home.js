@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 // import components
-import LatestProducts from '../components/LatestProducts.js';
-import Hero from '../components/Hero.js';
+import LatestProducts from "../components/LatestProducts.js";
+import Hero from "../components/Hero.js";
 
 const Home = () => {
   return (

@@ -10,14 +10,12 @@ import Product from "../components/Product";
 const Products = () => {
   const { id } = useParams();
   // get products based on category id
-  const { data } = useFetch(
-    `/products?populate=*&filters[categories][id][$eq]=${id}`
-  );
+  const { data } = useFetch(`/shoes?populate=*&filters[brands][id][$eq]=${id}`);
   const [title, setTitle] = useState(null);
   // set the title when the data is fetched
   useEffect(() => {
     if (data) {
-      setTitle(data[0].attributes.categories.data[0].attributes.title);
+      setTitle(data[0].attributes.brands.data[0].attributes.title);
     }
   }, [data]);
 
@@ -33,8 +31,8 @@ const Products = () => {
             </div>
             {/* product grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-[15px] md:gap-[30px]">
-              {data?.map((product) => {
-                return <Product product={product} key={product.id} />;
+              {data?.map((shoe) => {
+                return <Product product={shoe} key={shoe.id} />;
               })}
             </div>
           </main>

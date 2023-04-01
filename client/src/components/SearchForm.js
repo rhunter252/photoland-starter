@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 // icons
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch } from "react-icons/fi";
 // useNavigate hook
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const SearchForm = () => {
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -25,8 +25,8 @@ const SearchForm = () => {
     e.preventDefault();
     if (searchTerm.length > 0) {
       navigate(`/search?query=${searchTerm}`);
-      document.querySelector('input').value = '';
-      setSearchTerm('');
+      document.querySelector("input").value = "";
+      setSearchTerm("");
     } else {
       // if input is empty set animation to true
       setIsAnimating(true);
@@ -37,17 +37,17 @@ const SearchForm = () => {
     <form
       onSubmit={handleSubmit}
       className={`${
-        isAnimating ? 'animate-shake' : 'animate-none'
+        isAnimating ? "animate-shake" : "animate-none"
       } w-full relative`}
     >
       <input
         onChange={handleSearchInput}
-        className='input'
-        type='text'
-        placeholder='Search for a product...'
+        className="input"
+        type="text"
+        placeholder="Search for a sneaker..."
       />
-      <button className='btn btn-accent absolute top-0 right-0 rounded-tl-none rounded-bl-none'>
-        <FiSearch className='text-xl' />
+      <button className="btn btn-accent absolute top-0 right-0 rounded-tl-none rounded-bl-none">
+        <FiSearch className="text-xl" />
       </button>
     </form>
   );
