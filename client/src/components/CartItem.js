@@ -9,7 +9,7 @@ import Qty from "../components/Qty";
 import { CartContext } from "../context/CartContext";
 
 const CartItem = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   const { removeFromCart } = useContext(CartContext);
   return (
     <div className="flex gap-x-8">

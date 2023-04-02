@@ -2,6 +2,8 @@ import React from "react";
 import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="pt-16 bg-primary">
       <div className="container mx-auto">
@@ -25,28 +27,28 @@ const Footer = () => {
         </form>
         {/* links */}
         <div className="text-base text-white/60 flex gap-x-6 capitalize max-w-max mx-auto mb-9">
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             Returns policy
           </a>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             Track your order
           </a>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             Shipping & delivery
           </a>
         </div>
         {/* socials */}
         <div className="flex gap-x-6 max-w-max mx-auto text-lg mb-16">
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             <FaYoutube />
           </a>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             <FaInstagram />
           </a>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             <FaTwitter />
           </a>
-          <a href="#" className="hover:text-white transition-all">
+          <a href="/" className="hover:text-white transition-all">
             <FaFacebook />
           </a>
         </div>
@@ -55,7 +57,7 @@ const Footer = () => {
       <div className="py-10 border-t border-t-white/10">
         <div className="container mx-auto">
           <div className="text-center text-sm text-white/60">
-            Copyright &copy; Photoland 2023. All rights reserved.
+            Copyright &copy; Photoland {year}. All rights reserved.
           </div>
         </div>
       </div>

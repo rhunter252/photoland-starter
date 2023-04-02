@@ -10,6 +10,8 @@ const CategoryNavMobile = ({ setCatnavMobile }) => {
   // get categories
   const { data } = useFetch("/brands");
 
+  // console.log(data);
+
   return (
     <div className="w-full h-full bg-primary p-8">
       {/* close icon */}
@@ -23,8 +25,9 @@ const CategoryNavMobile = ({ setCatnavMobile }) => {
         {data?.map((brands) => {
           return (
             <Link
-              to={`shoes/${brands.id}`}
+              to={`/search?query=${brands.attributes.Brand}`}
               className="uppercase font-medium"
+              onClick={() => setCatnavMobile(false)}
               key={brands.id}
             >
               {brands.attributes.Brand} Sneakers
