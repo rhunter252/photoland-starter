@@ -17,7 +17,7 @@ const CategoryNav = () => {
           {data?.map((brand) => {
             return (
               <Link
-                to={`/shoes/${brand.id}`}
+                to={`/search?query=${brand.attributes.Brand}`}
                 className="cursor-pointer uppercase"
                 key={brand.id}
               >

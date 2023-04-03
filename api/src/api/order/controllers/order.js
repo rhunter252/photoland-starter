@@ -16,11 +16,10 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       return { error: "Cart not found in request body" };
     }
     const lineItems = await Promise.all(
-      cart.map(async (product) => {
+      cart.map(async (shoe) => {
         const item = await strapi
           .service("api::product.product")
-          .findOne(product.id);
-        // console.log(product);
+          .findOne(shoe.id);
         return {
           price_data: {
             currency: "usd",
@@ -29,7 +28,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
             },
             unit_amount: item.price * 100,
           },
-          quantity: product.amount,
+          quantity: shoe.amount,
         };
       })
     );

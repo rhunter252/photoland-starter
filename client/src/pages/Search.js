@@ -11,7 +11,7 @@ const Search = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const searchTerm = searchParams.get("query");
-  console.log(searchTerm);
+  // console.log(searchTerm);
   // get products based on search term
   const { data } = useFetch(
     `/shoes?populate=*&filters[title][$contains]=${searchTerm}`
